@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html>
+<title>Mohit Chandani</title>
+<link rel="apple-touch-icon" sizes="57x57" href="Media/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="Media/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Media/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="Media/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Media/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="Media/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="Media/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="Media/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Media/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="Media/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Media/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="Media/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Media/favicon-16x16.png">
+<!-- <link rel="manifest" href="https://mobinationlegend.com/manifest.json"> -->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="Media/img004.png" style="width:100%">
+  <a href="index.html#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="index.html#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="index.html#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="index.html#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="index.html#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Mohit Chandani</h1>
+    <p>Web & Mobile Application Developer and Caffeine Addict</p>
+    <img src="Media/img_001.png" alt="boy" class="w3-image" width="250" height="381">
+  </header>
+
+  <!-- About Section <img src="Media/img_001.jpg" alt="boy" class="w3-image" width="992" height="1108">-->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>I'm Mohit Chandani. Currently, I'm working as a full time software engineer at Nexthoughts Software Technologies Pvt Ltd, Noida. Since childhood, my love and curiosity for technology was obvious. I always 
+    wanted to know the HOW, WHY, and my favorite, LET ME TRY made me pursue my degree in Information Technology. I love making websites, coding applications and even
+    creating games on mobile devices.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey" >My Skills</h3>
+    <p class="w3-wide" >HTML 5</p>
+    <a href="https://courses.edx.org/certificates/f2112f294dfe4fbb8fb984ae1fae39b3"><div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:95%" id="background-bar"></div>
+    </div> </a>
+    <p class="w3-wide">CSS 3</p>
+    <a href="https://courses.edx.org/certificates/e16ca0694c0745f69db912b16fe25b0e"><div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:90%" id="background-bar"></div>
+    </div> </a>
+    <p class="w3-wide">Javascript</p>
+    <a href="https://courses.edx.org/certificates/0373a610ab21416390a80d6d05b699c0"><div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:87%" id="background-bar"></div>
+    </div> </a>
+    <p class="w3-wide">Java</p>
+    <div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:95%" id="background-bar"></div>
+    </div>
+
+    <p class="w3-wide">Nuxt.js</p>
+    <div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:85%" id="background-bar"></div>
+    </div>
+
+    <p class="w3-wide">BootStrap</p>
+    <div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:80%" id="background-bar"></div>
+    </div>
+
+    <p class="w3-wide">MongoDB</p>
+    <div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:85%" id="background-bar"></div>
+    </div>
+
+    <p class="w3-wide">Git</p>
+    <div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:95%" id="background-bar"></div>
+    </div>
+    <p class="w3-wide">Spring Boot</p>
+    <div class="w3-white" id="background-shadow">
+      <div class="w3-dark-grey" style="height:28px;width:95%" id="background-bar"></div>
+    </div><br>
+    
+
+    <a href="Media/Mohit_Chandani_Resume.pdf" download="Media/Mohit_Chandani_Resume.PDF"> 
+    <button class="w3-button w3-light-grey w3-padding-large w3-section"> 
+      <i class="fa fa-download"></i> Download Resume </button></a>
+        
+  </div>
+  <!-- This is the begging of the end -->
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos 750 width and 550 height for all photoes here -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <a href="javascript:void(0)"><img src="Media/mango_class.jpg" style="width:100%" onmouseover="src='Media/mango_class.png'" onmouseout="src='Media/mango_class.jpg'"> </a>
+        <h4> Mango Class(Live Online Classes for students) </h4>
+        <p style="font-family: Montserrat, sans-serif; text-align: justify;"> Due to the COVID-19 all the
+        teaching were going online so, with the mango class as a platform it provided a solution to teacher to 
+        continue to conduct their online classes using Jitsi for the video interaction. Currently the project is 
+        private but soon will be made public.
+        </p>
+      </div>
+
+      <div class="w3-half">
+        <a href="javascript:void(0)"><img src="Media/webinar.jpg" style="width:100%" onmouseover="src='Media/webinar.png'" onmouseout="src='Media/webinar.jpg'"> </a>
+        <h4>  Webinar Application </h4>
+        <p style="font-family: Montserrat, sans-serif; text-align: justify;"> It's webinar application made using the Agora for RealTime Video Engagement. The front-end was made in the Nuxt.js and backend was made in Spring Boot and for the database Mongo-DB was used. The project is currently private and will soon be added to my repository </p>
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+  <!-- This is the end of the end -->
+
+  
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> New Delhi, India</p>
+      <p><a style="text-decoration: none;" href="tel:+91-858-610-3251"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Cell: +91 858 - 610 - 3251</a></p>
+      <p> <a style="text-decoration: none;" href="mailto:mohitchandani30@gmail.com"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mohitchandani30@gmail.com</a></p>
+    </div><br>
+    <!-- <p>Let's get in touch. Send me a message:</p>
+
+     <form method="post" action="https://mobinationlegend.com/index.php">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p><button id="specialButton" class="w3-button w3-light-grey w3-padding-large" type="submit"> <i class="fa fa-paper-plane"></i> SEND MESSAGE </button> </p>
+    </form> -->
+
+  </div>
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+
+    <a href="https://linkedin.com/in/mohit-chandani-b304411b2"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/thenameismohiitt/"><i class="fa fa-instagram w3-hover-opacity"></i></a> 
+    <a href="https://github.com/thenameismohiitt"><i class="fa fa-github w3-hover-opacity"></i></a> 
+    <a href="https://stackoverflow.com/users/14742906/mohit-chandani"><i class="fa fa-stack-overflow w3-hover-opacity"></i></a> 
+    <a href="https://mohitchandani.medium.com"><i class="fa fa-medium w3-hover-opacity"></i></a>
+    
+    
+    
+    <p class="w3-medium">&copy; copyrights Mohit Chandani 2021. All rights reserved.</p>
+  <!-- End footer -->
+  </footer>
+<!-- END PAGE CONTENT -->
+</div>
+</body>
+</html>
