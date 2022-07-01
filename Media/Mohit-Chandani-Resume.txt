@@ -1,0 +1,107 @@
+﻿Mohit Chandani
+Software Developer
+
+
+Email:mohit.chandani@nexthoughts.com                                Phone Number: 8586013251
+________________
+
+
+
+
+Objective
+
+
+To provide skills to serve the organisation in the best possible way with sheer determination and commitment and to be part of the organisation where I can learn, perform and exhibit my proficiency by making substantial contribution in the interest of organisation and self.
+
+
+Work Experience
+
+
+* Software Developer
+Nexthoughts Software Technologies Pvt. Ltd.
+(08/2020 - Present)
+
+
+* Software Developer Trainee
+Nexthoughts Software Technologies Pvt. Ltd.
+(01/2020 - 07/2020)
+
+
+Skills
+
+
+* Backend - Spring Boot, Java
+
+
+* Frontend - Nuxt Js, Vue Js
+
+
+* Database - MongoDB
+
+
+* Operating System - Linux, Microsoft Windows
+
+
+* Tools - Eclipse, Intellij Idea, Web Storm, Visual Studio Code
+
+
+* Subject of Interest - Spring Boot, React, Nuxt Js.
+
+
+
+
+Projects
+
+
+* Mango Class : Live Classes on web and mobile (03/2020 - 08/2020)
+
+
+1. Responsible for designing and developing API
+2. Responsible for creating web pages.
+3. Building the SAAS website for students and teachers.
+
+
+* Online Book Recommendation System(07/2019 - 10/2019)
+
+
+1. Building web based book recommendation engine that uses collaborative filtering to recommend the books.
+
+
+
+
+Education
+
+
+
+
+DEGREE
+	INSTITUTE
+	CGPA/PERCENTAGE
+	YEAR
+	MCA
+	CDAC,IP University
+	70.52%
+	2017-2020
+	BCA
+	Jamia Hamdard
+	73.77%
+	2014-2017
+	CLASS XII
+	New Green Field School
+	65.8%
+	2013
+	CLASS X
+	New Green Field School
+	64.6
+	2011
+	
+
+
+
+Personal Information
+
+
+Date Of Birth: 30th July 1995
+
+
+Languages Known: English,Hindi
